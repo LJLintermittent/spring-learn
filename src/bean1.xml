@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="user" class="com.learn.testBean.User"> </bean>
+<bean id="book" class="com.learn.testBean.Book">
+<property name="bName" value="毛毛"> </property>
+<property name="bAuthor" value="徐欣裕"> </property>
+
+<!--    <property name="address">-->
+<!--        <null> </null>-->
+<!--    </property>-->
+    <property name="address">
+        <value><![CDATA[《西安》]]></value>
+    </property>
+</bean>
+<bean id="orders" class="com.learn.testBean.Orders">
+<constructor-arg name="oName" value="面包"> </constructor-arg>
+<constructor-arg name="oPrice" value="5"> </constructor-arg>
+</bean>
+<!--    <bean id="book" class="com.learn.testBean.Book" p:bAuthor="李佳乐" p:bName="小李" p:address="西安">-->
+
+<!--    </bean>-->
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+<util:list id="FilmList">
+    <value>教父1</value>
+    <value>教父2</value>
+    <value>教父3</value>
+</util:list>
+
+<bean id="film" class="com.learn.collection.Film" scope="prototype">
+    <property name="list" ref="FilmList"> </property>
+</bean>
+</beans>
